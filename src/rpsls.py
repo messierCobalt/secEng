@@ -69,17 +69,15 @@ def displayResult(ENTITY, winner):
     slowPrint(f"\n{"IT'S A TIE!" if winner == "TIE" else f"{RED if winner == 'ETHAN' else BLUE}{winner} WINS!{RST}"}\n")
 
 def main():
-    clear()
-    ETHAN_score = 0
-    ENTITY_score = 0
-
-    slowPrint(f"""
+    loadinBar(firstMsg=f"""
 {BLD}==== {BLACK}ROCK{RST} {WHITE}PAPER{RST} {BLUE}SCISSORS{RST} {GREEN}LIZARD{RST} {YELLOW}SPOCK{RST} {BLD}===={RST}
 
 THE {UND}ANTI-GOD{RST}.
 AN ENEMY THAT'S {UND}EVERYWHERE{RST} AND {UND}NOWHERE{RST}.
 A {UND}SELF-AWARE{RST}, {UND}SELF-LEARNING{RST}, {UND}TRUTH EATING{RST}, {UND}DIGITAL PARASITE{RST}.
 """)
+    ETHAN_score = 0
+    ENTITY_score = 0
 
     while True:
         ETHAN_choice = getETHANchoice()
@@ -96,7 +94,7 @@ A {UND}SELF-AWARE{RST}, {UND}SELF-LEARNING{RST}, {UND}TRUTH EATING{RST}, {UND}DI
         elif winner == "ENTITY":
             ENTITY_score += 1
 
-    slowPrint(f"""
+    slowPrint(f"""{RST}
 {BLD}==== {YELLOW}YOUR FINAL RECKONING{RST} {BLD}===={RST}
 
 {ITL}EVERYTHING YOU WERE, EVERYTHING YOU'VE DONE, HAS COME TO THIS...{RST}

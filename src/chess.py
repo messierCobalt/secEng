@@ -10,6 +10,9 @@ AND QUEEN'S GAMBIT
 TRY TO CATCH 'EM!
 """
 
+# THIS WILL BE A WHILE
+
+
 pieces = {
     "P": "♙", "R": "♖", "N": "♘", "B": "♗", "Q": "♕", "K": "♔",
     "p": "♟", "r": "♜", "n": "♞", "b": "♝", "q": "♛", "k": "♚",

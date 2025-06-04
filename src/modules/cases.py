@@ -1,7 +1,7 @@
 import random
 
 """
-their are many character casing:
+THERE ARE ALREADY MANY CHARACTER CASING OUT THERE... SUCH AS:
 - lowercase
 - UPPERCASE
 - Title Case
