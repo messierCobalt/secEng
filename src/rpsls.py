@@ -1,5 +1,6 @@
 from modules.CLI import *
-import random, sys
+import random
+import sys
 
 """
 THERE ARE WAY TOO MANY REFERENCES

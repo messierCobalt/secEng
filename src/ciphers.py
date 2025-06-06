@@ -1,5 +1,6 @@
 from modules.CLI import *
-import random, string
+import random
+import string
 
 """
 THE CIPHER LIST:
