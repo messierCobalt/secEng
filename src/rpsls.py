@@ -28,7 +28,7 @@ SHELDON = f"""
 {WHITE}PAPER{RST} disproves {YELLOW}SPOCK{RST}
 {YELLOW}SPOCK{RST} vaporizes {BLACK}ROCK{RST}
 
-and as it always has
+{ITL}and as it always has{RST}
 
 {BLACK}ROCK{RST} crushes {BLUE}SCISSORS{RST}
 """
@@ -55,7 +55,7 @@ def getETHANchoice():
         elif ethanInput in OPTIONS:
             return ethanInput
         else:
-            slowPrint(f"{RED}MY {UND}EARPIECE{RST} {RED}IS FAILING...")
+            slowPrint(f"{RED}MY {UND}EARPIECE{RST} {RED}IS FAILING...\n")
 
 def determineWinner(ETHAN, ENTITY):
     if ETHAN == ENTITY:
@@ -66,10 +66,14 @@ def determineWinner(ETHAN, ENTITY):
 
 def displayResult(ENTITY, winner):
     slowPrint(f"{BLUE}ENTITY: {ENTITY}{RST}")
-    slowPrint(f"\n{"IT'S A TIE!" if winner == "TIE" else f"{RED if winner == 'ETHAN' else BLUE}{winner} WINS!{RST}"}\n")
+    if winner == "TIE":
+        slowPrint(f"\nIT'S A TIE!\n")
+    else:
+        color = RED if winner == "ETHAN" else BLUE
+        slowPrint(f"\n{color}{winner} WINS!{RST}\n")
 
 def main():
-    loadinBar(firstMsg=f"""
+    loadinBar(monologue=f"""
 {BLD}==== {BLACK}ROCK{RST} {WHITE}PAPER{RST} {BLUE}SCISSORS{RST} {GREEN}LIZARD{RST} {YELLOW}SPOCK{RST} {BLD}===={RST}
 
 THE {UND}ANTI-GOD{RST}.
