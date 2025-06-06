@@ -102,7 +102,7 @@ def main():
                         shift = int(input(f"{YELLOW}SHIFT (int.)? {RST}").strip())
                         break
                     except ValueError:
-                        slowPrint(f"{RED}INVALID SHIFT!{RST}")
+                        slowPrint(f"{RED}INVALID SHIFT.{RST}")
                         continue
                 output = caesar(userInput, shift, encrypt)
 
