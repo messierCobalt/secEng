@@ -26,7 +26,7 @@ EXIT | QUIT | CLOSE      KILLS {BLD}{UND}{fileName}{RST}"""
 # theBasics_funcs
 clear = lambda: os.system("cls" if os.name == "nt" else "clear")
 
-def slowPrint(text, t=0.01, T=0.05, newlineCinema=True, curtainCall_in=0.1, end="\n"):
+def slowPrint(text, t=0.01, T=0.05, newlineCinema=True, curtainCall_in=0.1, end=""):
     for char in text:
         print(char, flush=True, end=end)
         time.sleep(random.uniform(t, T))

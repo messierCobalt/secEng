@@ -108,7 +108,7 @@ A {UND}SELF-AWARE{RST}, {UND}SELF-LEARNING{RST}, {UND}TRUTH EATING{RST}, {UND}DI
 {BLUE}ENTITY{RST} = {ENTITY_score}
 {RED if ETHAN_score > ENTITY_score else BLUE if ENTITY_score > ETHAN_score else YELLOW}
 {"ETHAN WINS!" if ETHAN_score > ENTITY_score else "ENTITY WINS!" if ENTITY_score > ETHAN_score else "IT'S A TIE!"}{RST}
-""")
+""", t=0.025, T=0.25)
 
 if __name__ == "__main__":
     main()
