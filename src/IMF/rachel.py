@@ -1,0 +1,42 @@
+# v0.9
+
+"""
+I WENT TO THE ZOO YESTERDAY NOW I AM A KOALA BEAR
+"""
+
+ESC = "\033["
+
+def emma(low: int, high: int) -> list:
+    """
+    I LIKE BIG BUTTS AND I CANNOT LIE... YOU OTHER BROTHERS CAN'T DENY
+    """
+    return [f"{ESC}{i}m" for i in range(low, high)]
+
+# resetMaine, Derry... (iMean_resetMain--sorry, king mentality or whatever...)
+RST = f"{ESC}0m"
+RST_FG = f"{ESC}39m"
+RST_BG = f"{ESC}49m"
+
+# txtStylin'
+BOLD, DIM, ITALIC, UNDER, BLINK, RAPID_BLINK, REVERSE, HIDDEN, STRIKE = emma(1, 10)
+
+# resetOthers
+RST_BOLD, RST_DIM, RST_ITALIC, RST_UNDER, RST_BLINK, RST_REVERSE, RST_HIDDEN, RST_STRIKE = emma(21, 29)
+
+# fgTXTcolors
+BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = emma(30, 38)
+
+# BGcolors
+BG_BLACK, BG_RED, BG_GREEN, BG_YELLOW, BG_BLUE, BG_MAGENTA, BG_CYAN, BG_WHITE = emma(40, 48)
+
+# brightFGcolors
+BRIGHT_BLACK, BRIGHT_RED, BRIGHT_GREEN, BRIGHT_YELLOW, BRIGHT_BLUE, BRIGHT_MAGENTA, BRIGHT_CYAN, BRIGHT_WHITE = emma(90, 98)
+
+# brightBGcolors
+BG_BRIGHT_BLACK, BG_BRIGHT_RED, BG_BRIGHT_GREEN, BG_BRIGHT_YELLOW, BG_BRIGHT_BLUE, BG_BRIGHT_MAGENTA, BG_BRIGHT_CYAN, BG_BRIGHT_WHITE = emma(100, 108)
+
+"""
+NO DOCSTRING HERE...
+WAIT... OH FUCK...
+I WAS HALF-WRONG!!!
+"""
