@@ -1,21 +1,12 @@
-from IMF.shell import * # like that?
+from IMF.hunt import * # like that?
 import random
 import string
 
-# v0.1
-
-"""
-THE CIPHER LIST:
-1. CAESAR CIPHER     - SHIFTS LETTERS BY SET NUMBER
-2. ATBASH CIPHER     - MIRRORS ALPHABETS
-3. RANDOM SUBST.     - SHUFFLES ALPHABETS
-4. MORSE CODE        - LETTERS BECOMES DOTS AND DASHES
-"""
+__version__ = "v0.1.1"
 
 def caesar(text: str, shift: int, encrypt: bool = True) -> str:
     """
-    SHE IS THE MOST INSECURE
-    I MEAN, UNSECURE CIPHER!!!
+    SHE IS THE MOST INSECURE... I MEAN, UNSECURE CIPHER!!!
     """
     output = ""
     for c in text:
@@ -31,10 +22,9 @@ def caesar(text: str, shift: int, encrypt: bool = True) -> str:
             output += c
     return output
 
-def atBash(text: str) -> str: # i wanted to use @bash... bruh
+def atBash(text: str) -> str: # i wanted to use @bash... fuck you python
     """
-    SHE MIRRORS EVERYTHING...
-    THE VIGENERE CIPHER...
+    SHE MIRRORS EVERYTHING... THE VIGENERE CIPHER...
     """
     output = ""
     for c in text:
@@ -48,7 +38,8 @@ def atBash(text: str) -> str: # i wanted to use @bash... bruh
 
 def random(text: str, encrypt: bool = True, key: None = None) -> tuple[str, list]: 
     """
-    LOVE ENTROPY?
+    YOU LOVE ENTROPY?
+    YOU'LL LOVE HER...
     """
     chars = list(" " + string.ascii_letters + string.digits + string.punctuation)
     if key is None:
@@ -70,6 +61,9 @@ def random(text: str, encrypt: bool = True, key: None = None) -> tuple[str, list
 
 def morse(text: str, encrypt: bool = True) -> str:
     """
+    IT'S JUST DOTS DASHES AND SLASHES
+    
+    BRAND DID YOU KNOW?
     SHE ONCE WAS, morse.py!
     """
     MORSE = {
@@ -90,10 +84,6 @@ def morse(text: str, encrypt: bool = True) -> str:
         return ' '.join(''.join(REV.get(l, '?') for l in w.split()) for w in words)
 
 def main() -> None:
-    """
-    SHE RUNS... YOU CAN TEST
-    IF SHE DOESN'T... YOU TELL ME!!!
-    """
     penny()
     while True:
         userInput = input(f"{BRIGHT_BLUE}~/{fileName}$ {RST}").strip().upper()
@@ -142,22 +132,21 @@ def main() -> None:
 if __name__ == "__main__": 
     main()
 
-"""
-FUN FACT:
+RAY = f"""
+{BOLD}{UNDER}MANY{RST} GIRLS GIVE MIXED SIGNALS.
+THIS IS JUST THEIR TOOL AND YOU CAN USE IT TOO.
+I AM NOT BEING SEXIST OR ANYTHING... IT'S JUST A FACT.
 
-__name__ IS A PRE DEFINED VARIABLE.
-IT'S SET "__main__" IF THE CODE IS
-RUN DIRECTLY AND NOT IMPORTED TO
-ANOTHER FILE.
+CARE FOR ANY FACT? I SWEAR IT'S A FUN FACT...
 
-YOU MIGHT WONDER WHAT VALUE IS IF 
-THE PROGRAM IS IMPORTED TO A MODULE?
-WELL
-GO AND TEST THAT YOUSELF
-I AM NOT YOUR MOM.
+YOU KNOW? __name__ IS A PRE DEFINED VARIABLE.
+IT'S SET "__main__" IF THE CODE IS RUN DIRECTLY
+AND NOT IMPORTED TO ANOTHER FILE.
 
-AND YES, THERE ARE OTHER "SNEAKY",
-"HIDDEN", "PRE-DEFINED" STUFF... IT'S
-PYTHON NOT C... PYTHON'S LIKE WINDOWS
-AND C LIKE LINUX OR BRAVE AND FIREFOX.
+YOU MIGHT WONDER WHAT VALUE IS IF THE PROGRAM
+IS IMPORTED TO A MODULE? WELL... GO AND TEST
+THAT YOUSELF... I AM NOT YOUR MOM.
+
+AND YES, THERE ARE OTHER "SNEAKY", "HIDDEN",
+"PRE-DEFINED" STUFF.
 """

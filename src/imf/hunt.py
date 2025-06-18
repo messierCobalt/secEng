@@ -6,13 +6,7 @@ try: from rachel import *
 except ImportError: from .rachel import *
 if os.name != "nt": import readline # for unix CLI purposes (don't mind her)
 
-# v0.5.1
-
-"""
-WE LIVE AND DIE IN THE SHADOWS
-FOR THOSE WE HOLD CLOSE
-AND FOR THOSE WE NEVER MEET
-"""
+__version__ = "v5.2"
 
 fileName = os.path.basename(sys.argv[0])
 
@@ -28,23 +22,22 @@ registry = {} # she's the command registry
 
 def regedit(cmd: str, func: callable) -> None:
     """
-    SHE ADDS CALLABLE FUNCTIONS TO REGISTRY WITH THEIR CMDS
-    I KNOW YOU HAVE HER NUMBER BUT ONLY CALL HER IN UPPERCASE...
+    HE ADDS CALLABLE FUNCTIONS TO REGISTRY WITH THEIR CMDS
+    I KNOW YOU HAVE HIS NUMBER BUT CALL HIM IN UPPERCASE--CMDS
     """
     if func and cmd:
         registry[cmd.upper()] = func
 
 def monica() -> None:
     """
-    SHE LOVES CLEANING... THE TERMINAL SCREEN...
-    AND EVERYTHING ELSE... BUT NOT HERE!!!
+    SHE LOVES CLEANING THE TERMINAL SCREEN... AND EVERYTHING ELSE!!!
     """
     os.system("cls" if os.name == "nt" else "clear")
 
 def terminate(msg: str = "GOODBYE!") -> None:
     """
     THE PRESIDENT HAS INITATED GHOST... I MEAN, TERMINATION PROTOCOL...
-    THE ENTIRE IMF... I MEAN, TERMINAL IS DISAVOWED... I MEAN TERMINATED!!!
+    THE ENTIRE IMF... I MEAN, PROGRAM IS DISAVOWED... I MEAN TERMINATED!!!
     """
     sys.exit(f"{BRIGHT_RED}{msg}{RST}")
 
@@ -70,7 +63,7 @@ def penny(steps: int = 28, delay: tuple = (0.01, 0.1), tilte: str = fileName,) -
 
 def limbo(plants: callable, inputMsg: str = f"{BRIGHT_BLUE}~/{fileName}{RST}$ ") -> None:
     """
-    SHE IS STUCK IN A LIMBO
+    PLAYDEAD WILL MAKE YOU STUCK IN A LIMBO
     """
     penny() # what?
     while True:
@@ -100,21 +93,15 @@ regedit("EXIT", terminate)
 regedit("EJECT", terminate)
 regedit("TERMINATE", terminate)
 regedit("QUIT", terminate)
+# this is how you'll call him maybe
 
-"""
-YOU KNOW? EXTREME GRAVITY BENDS SPACE-TIME MESH.
-WHY DON'T I STRETCH THIS??
-HOW ABOUT I TELL YOU A STORY???
+RAY = """
+THIS MODULE WAS MADE AS THE BACKBONE OF EVERY CLI PROGRAM IN THIS REPO.
+HE'S THE LEADER OF THIS TEAM... HE'S NAME IS 
 
-SO, THERE WAS THIS GUY--MARKUS JONES, HE DOESN'T REMEMBER HIS CHILDHOOD.
-AND, ONE DAY, HE WAS AT WORK, HIS WIFE--CYNTHIA WAS COMING BACK HOME (FROM
-SHOPPING FOR THEIR SONS BIRTHDAY. WITH HIS SON--PETER.) AND THEN A HOMELESS
-FELLA MUGGED THEN KILLED HER INFRONT OF PETER!
+ETHAN HUNT WILL BE YOUR POINT MAN--AS USUAL! 
 
-AFTER THAT EVENING, MARKUS STARTED DRINKING--AGAIN, NEGLECTING PETER. THE
-FOSTER PEOPLE TOOK PETER FAR AWAY...
-
-~ PS: THIS IS JUST STARTING CRUMS OF EARLY DRAFTS OF MY SHORT STORY, 
-TITLED: BOLT MAN... I KNOW IT'S SILLY BUT CUT ME SOME SLACK, I HAD
-THIS IDEA WHEN I WAS 13 OR 14...
+THE OATH: WE LIVE AND DIE IN THE SHADOWS
+          FOR THOSE WE HOLD CLOSE
+          AND FOR THOSE WE NEVER MEET
 """

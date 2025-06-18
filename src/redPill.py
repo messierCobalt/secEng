@@ -1,18 +1,6 @@
-from IMF.shell import *
+from IMF.hunt import *
 
-# v0.3.1
-
-"""
-HEY VSAUCE... RAY HERE...
-I'M INSIDE YOUR HOUSE... 
-I'M KIDDING... OR AM I???
-
-I SUCK AT MATRIX MULTIPLICATION
-SO I THOUGHT I SHOULD CRAFT THIS...
-
-NOW I'VE COME TO KNOW... 
-I SUCK AT THIS TOO, BRUH!!!
-"""
+__version__ = "v0.3.2"
 
 matrix = list[list[int]] # py_3.8 and below would choke on this...
 
@@ -184,13 +172,7 @@ TYPE | SHAPE ---------- TELLS THE SHAPE OF THE MATRIX
 SIZE | NRC ----- PRINTS SIZE OF THE MATRIX IN QUESTION
 {RST}"""
 
-
 def main() -> None:
-    monica()
-    penny()
-    print(f"{CYAN}YOU'VE STEPPED INTO MATRIX DOME\n{RST}")
-    time.sleep(1)
-
     A = take("A = ")
     B = take("B = ") 
 
@@ -220,23 +202,15 @@ def main() -> None:
                 else:
                     value()
                 break
-
+    
 if __name__ == "__main__":
     main()
 
-"""
-FUCK SCHOOL...
-IT'S MY WAY OR THE HIGHWAY...
-BUT WHAT IF I AM THE ONE...
-WHO'LL BE LIVING ON THE HIGHWAY...
-A YEAR FROM NOW?
+RAY = """
+I REALLY SUCKED AT MATRIX MULTIPLICATION
+THEN IT CAME TO ME, WHY SHOULDN'T I MAKE THIS...
+NOW I KNOW I SUCK AT THIS TOO... BRUH!!!
 
-NOTHING IS CERTAIN 
-
-(YOU WON'T GET IT... TRY SEARCHING 
-FOR THAT TERM IN YOUTUBE MUSIC AND 
-LOOK FOR A MOVIE SCORE!!! THAT'S 
-NOT ONE OF THE GOOD ONES IN THE 
-FRANCHISE BUT IT'S WATCHABLE. THEY
-SAY ITS THE FINAL BUT I HOPE NOT)
+YOU KNOW WHAT? FUCK SCHOOL... THEY ARE LEGAL
+VAMPIRES (NOT THE GOOD KIND--LIKE ED. CULLEN)
 """

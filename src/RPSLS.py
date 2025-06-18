@@ -1,11 +1,7 @@
-from IMF.shell import * # get used to it
+from IMF.hunt import * # get used to it
 import random
 
-# v0.4
-
-"""
-ROCK U PAPER U SCISSORS U LIZARD U SPOCK (U = UNION... | IN .py TERMS) 
-"""
+__version__ = "v0.4.5"
 
 LAWS = {
     "ROCK": ["SCISSORS", "LIZARD"],
@@ -109,12 +105,15 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-"""
+RAY = f"""
+{BOLD}ROCK U PAPER U SCISSORS U LIZARD U SPOCK (U = UNION... | IN .py TERMS){RST}
+
+                        THE HAMBURGER POSTULATE
+                                (S1E5)
                                                             CUT TO:
 Bi-atomic cutscene with blue background for around 4 
 seconds.
                                                             FADE IN TO:
-
 INT. SHELDON AND LEONARD'S APARTMENT - DAY
 
 SHELDON is pissed at LESLIE because she tampered 

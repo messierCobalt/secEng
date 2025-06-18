@@ -1,57 +1,11 @@
-from IMF.shell import *
+from IMF.hunt import *
 import random
 
-# v0.7.5
-
-"""
-THE CHARACTER CASES I'LL BE FOCUSING ON:
-- lowercase
-- UPPERCASE
-- Title Case
-- Capitalized case
-- sWAP case (from Swap CASE)
-- aLtErNaTiNg CaSe
-- camelCase (myFav)
-- PascalCase
-- snake_case
-- SCREAMING_SNAKE_CASE (CONSTANT_CASE)
-- kebab-case
-- Train-Case
-- RandoM case (eNtRopY IS VeRY hIGh--pUN IntEndEd... bMTh WoULD lOvE THIS!!!)
-- cullenCASE (inventedHIM)
-- ALTcullenCASE (INVENTEDhimTOO)
-- dot.case
-- path/case
-- flatcase
-- UPPERFLATCASE
-"""
-
-HELP += f"""
-{BOLD}CASE CONV. CMDS:{RST}{BRIGHT_GREEN}
-LOWER <TXT> -------- lower case
-UPPER <TXT> -------- UPPER CASE
-TITLE <TXT> -------- Title Case
-CAPITALIZE <TXT> --- Capitalized case
-SWAP <TXT> --------- Swap Case -> sWAP cASE
-ALT <TXT> ---------- aLtErNaTiNg CaSe
-CAMEL <TXT> -------- camelCase
-PASCAL <TXT> ------- PascalCase
-SNAKE <TXT> -------- snake_case
-SCREAM <TXT> ------- CONSTANT_SCREAMING_CASE
-KEBAB <TXT> -------- kebab-case
-TRAIN <TXT> -------- Train-Case
-RANDOM <TXT> ------- rAnDOM cAse
-CULLEN <TXT> ------- cullenCASE (inventedHIM)
-ALTCULLEN <TXT> ---- ALTcullenCASE (INVENTEDhimTOO)
-DOT <TXT> ---------- dot.case
-PATH <TXT> --------- path/case
-FLAT <TXT> --------- flatcase
-UPPERFLAT <TXT> ---- UPPERFLATCASE
-{RST}"""
+__version__ = "v0.7.6"
 
 def T2L(txt: str) -> list:
     """
-    TEXT BECOMES LIST
+    (text: str) -> list
 
     HE'S THE WEIRD CHILD OF list() FUNCTION & .split() METHOD
     """
@@ -59,18 +13,13 @@ def T2L(txt: str) -> list:
 
 def flatcase(txt: str) -> str:
     """
-    HE'S IMPORTANT (THAT'S WHY HE IS HIS OWN FUNCTION)
-    HE NORMALIZES THE GIVEN TEXT
+    HE NORMALIZES THE GIVEN TEXT (WHICH IS ALSO THE FLATCASE)
     """
     return "".join(
         char.casefold() for char in txt if (char.isalnum() and not char.isspace())
         ) if txt else ""
 
-def switch(style: str = "camel", txt: str = "") -> str:
-    """
-    HE'S THE MAIN DEAL...
-    HE'S THE SWITCH!!!
-    """
+def switch(style: str, txt: str = "") -> str:
     s = flatcase(style) # s = style
     W = T2L(txt) # W, w = words, word
     nW = "" # nW = newWord 
@@ -124,23 +73,44 @@ def switch(style: str = "camel", txt: str = "") -> str:
         return nW
     return f"{BRIGHT_RED}E:{RST} NOT ENOUGH VALUES SUPPLIED"
 
+HELP += f"""
+{BOLD}CASE CONV. CMDS:{RST}{BRIGHT_GREEN}
+LOWER <TXT> -------- lower case
+UPPER <TXT> -------- UPPER CASE
+TITLE <TXT> -------- Title Case
+CAPITALIZE <TXT> --- Capitalized case
+SWAP <TXT> --------- Swap Case -> sWAP cASE
+ALT <TXT> ---------- aLtErNaTiNg CaSe
+CAMEL <TXT> -------- camelCase
+PASCAL <TXT> ------- PascalCase
+SNAKE <TXT> -------- snake_case
+SCREAM <TXT> ------- CONSTANT_SCREAMING_CASE
+KEBAB <TXT> -------- kebab-case
+TRAIN <TXT> -------- Train-Case
+RANDOM <TXT> ------- rAnDOM cAse
+CULLEN <TXT> ------- cullenCASE (inventedHIM)
+ALTCULLEN <TXT> ---- ALTcullenCASE (INVENTEDhimTOO)
+DOT <TXT> ---------- dot.case
+PATH <TXT> --------- path/case
+FLAT <TXT> --------- flatcase
+UPPERFLAT <TXT> ---- UPPERFLATCASE
+{RST}"""
+
 regedit("HELP", lambda : print(HELP))
 
 def main() -> None:
-    """
-    LOOK ON DOWN FROM THE BRIDGE
-    ...
-    GOODBYE!
-    """
     limbo(plants=lambda cmd, parts: print(switch(cmd, txt = " ".join(parts[1:]) if len(parts) > 1 else "")))
 
 if __name__ == "__main__":
     main()
 
-"""
-HE MIGHT BE OF NO USE TO YOU BUT I NEEDED HIM...
-AND THIS WAS THE PERFECT WAY TO SHOWCASE 
+RAY = """
+HAVE YOU EVER USED FLOW LAUNCHER?
+EVER ADDED A PLUGIN THAT CHANGES CASES?
+THAT'S EXACTLY WHAT HE DOES...
+
+ANYWAY, THIS WAS THE PERFECT WAY TO SHOWCASE 
 cullenCASE & ALTcullenCASE...
 
-HE MAYBE NAMED "CASE" BUT HE IS MORE OF "TARS"
+HE MAYBE CALLED "CASE" BUT HE IS "TARS"
 """
