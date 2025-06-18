@@ -1,6 +1,7 @@
-from IMF.hunt import *
+from imf.hunt import HELP, regedit, registry
+from imf.rachel import *
 
-__version__ = "v0.3.2"
+__version__ = "v0.3.5"
 
 matrix = list[list[int]] # py_3.8 and below would choke on this...
 
@@ -46,9 +47,6 @@ def vCHECK(M: matrix) -> bool:
     """
     CHECKS IF THE GIVEN MATRIX IS REALLY A MATRIX OR...
     (LONG PAUSE) ... NOT!
-
-    V-CHECK... KINDA LIKE THE V-CARD... NO NOT THAT V-CARD... 
-    BUT THE VALIDITY-CARD... YOU ARE REALLY DIRTY-MINDED...
     """
     if not M or not isinstance(M, list) or not all(isinstance(row, list) for row in M):
         return False
@@ -93,7 +91,8 @@ def hate(A: matrix, B: matrix) -> matrix:
 
 def bond(A: matrix, B: matrix) -> matrix | str:
     """
-    MATRIX MULTIPLICATION IS ALWAYS A PAIN IN THE ASS
+    NIGHTMARE OF MATRIX MULTIPLICATION STREET...
+    THE NAME'S BOND... MATRIX BOND
     """
     if not (vCHECK(A) and vCHECK(B)):
         return f"{RED}E:{RST} INVALID INPUT"
@@ -105,7 +104,8 @@ def bond(A: matrix, B: matrix) -> matrix | str:
 
 def take(Mname: str = "M = ") -> matrix:
     """
-    SHE TAKES MATRIX VALUES FROM THE USER, FROM...
+    SHE TAKES MATRIX VALUES FROM THE USER...
+    LIKE: 1,2,3;4,5,6;7,8,9
     """
     while True:
         try:
@@ -125,9 +125,6 @@ def give(M: matrix, name: str = "M") -> None:
     M = [1, 2]    A - B = [1, 0, 0]
         [3, 4] OR         [0, 1, 0]
         [5, 6]            [0, 0, 1]
-
-    HE GIVES, SHE TAKES... :smirk-face-emoji
-    OH BOY I REALLY NEED SOME GRASS TO TOUCH...
     """
     if not vCHECK(M):
         print(f"{RED}E:{RST} INVALID MATRIX")
@@ -161,7 +158,7 @@ def eCHECK(A: matrix, B: matrix) -> bool:
     return A == B
 
 # soon i'll start using *args and shit... rn, just bare with it... 
-# soon... :embarresed-laughing-emoji
+# soon... :embarrassed-laughing-emoji
 
 HELP += f"""
 MATRIX DOME CMDS:

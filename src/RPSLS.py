@@ -1,7 +1,9 @@
-from IMF.hunt import * # get used to it
+from imf.hunt import HELP, registry, regedit, penny # get used to it
+from imf.rachel import *
 import random
+import time
 
-__version__ = "v0.4.5"
+__version__ = "v0.5"
 
 LAWS = {
     "ROCK": ["SCISSORS", "LIZARD"],
@@ -12,8 +14,8 @@ LAWS = {
 }
 
 HELP += f"""{BOLD}IN GAME CMD:{RST}{BRIGHT_GREEN}
-PODKOVA | PILL ----- CONCLUDES GAME!
-{RST}
+PODKOVA | PILL ----- CONCLUDES GAME!{RST}
+
 {BOLD}SHELDON:{RST}
 {YELLOW}SCISSORS{RST} cuts {WHITE}PAPER{RST}
 {WHITE}PAPER{RST} covers {BLACK}ROCK{RST}
@@ -28,7 +30,7 @@ PODKOVA | PILL ----- CONCLUDES GAME!
 {ITALIC}and as it always has{RST}
 
 {BLACK}ROCK{RST} crushes {YELLOW}SCISSORS{RST}
-""" # told ya!
+"""
 
 ARSENAL = list(LAWS)
 
@@ -139,7 +141,7 @@ being Sheldon, he doesn't like that.
             I don't come in your house and
             touch your board.
 
-                       LESLIE
+                    LESLIE
             There are no incorrect equations on my
             board.
 

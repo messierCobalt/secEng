@@ -1,7 +1,8 @@
-from IMF.hunt import *
+from imf.hunt import HELP, limbo, regedit
+from imf.rachel import *
 import random
 
-__version__ = "v0.7.6"
+__version__ = "v0.8"
 
 def T2L(txt: str) -> list:
     """
@@ -13,7 +14,7 @@ def T2L(txt: str) -> list:
 
 def flatcase(txt: str) -> str:
     """
-    HE NORMALIZES THE GIVEN TEXT (WHICH IS ALSO THE FLATCASE)
+    HE NORMALIZES THE GIVEN TEXT (WHICH IS ALSO THE flatcase)
     """
     return "".join(
         char.casefold() for char in txt if (char.isalnum() and not char.isspace())

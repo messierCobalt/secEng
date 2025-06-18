@@ -11,8 +11,9 @@ Listen carefully, if you will. There's a __*vision*__ :
     - **\_\_init\_\_.py** — he's a snitch... not stitch... he tells py that it's a module folder. 
     - **hunt.py** — the leader of every IMF modules. Backbone of every CLI programs in this repo.
     - **rachel.py** — high on fashion, she styles text... 
+- **CRYPTic.py** — he's just a simple (game) CLI based cipher... converter.
 - **CASE.py** — he runs b/w character CASEs. he's 90% honest... i mean accurate... 
-- **mixedSignals.py** — he's just a simple (game) CLI based cipher... converter.
+
 - **redPill.py** — she manipulate matrices. it's bad at it, rn!!! (CLI).
 - **RPSLS.py** — simple rock, paper, scissors, lizard, spock... game w/ it--THE ENTITY (CLI).
 

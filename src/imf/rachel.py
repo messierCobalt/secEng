@@ -1,13 +1,12 @@
-__version__ = "v0.9.1"
+__version__ = "v0.9.3"
 
 ESC = "\033["
 
 def _emma(low: int, high: int) -> list:
     """
     SHE GENERATES ANSI CODES--FASTER!
-    
-    "I LIKE BIG BUTTS AND I CANNOT LIE" - EMMA GELLER GREENE (DAUGHTER
-    OF ROSS GELLER AND RACHEL GREEN) WILL LAUGH AT THIS TRACK
+    SHE'S THE CHILD OF ROSS AND RACHEL
+    EMMA GELLER GREENE
     """
     return [f"{ESC}{i}m" for i in range(low, high)]
 

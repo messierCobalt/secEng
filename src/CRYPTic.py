@@ -1,12 +1,13 @@
-from IMF.hunt import * # like that?
+from imf.hunt import fileName, registry, penny
+from imf.rachel import *
 import random
 import string
 
-__version__ = "v0.1.1"
+__version__ = "v0.1.5"
 
 def caesar(text: str, shift: int, encrypt: bool = True) -> str:
     """
-    SHE IS THE MOST INSECURE... I MEAN, UNSECURE CIPHER!!!
+    HE IS THE MOST INSECURE... I MEAN, UNSECURE CIPHER!!!
     """
     output = ""
     for c in text:
@@ -24,7 +25,7 @@ def caesar(text: str, shift: int, encrypt: bool = True) -> str:
 
 def atBash(text: str) -> str: # i wanted to use @bash... fuck you python
     """
-    SHE MIRRORS EVERYTHING... THE VIGENERE CIPHER...
+    A <-> Z. THE VIGENERE CIPHER.
     """
     output = ""
     for c in text:
@@ -38,8 +39,7 @@ def atBash(text: str) -> str: # i wanted to use @bash... fuck you python
 
 def random(text: str, encrypt: bool = True, key: None = None) -> tuple[str, list]: 
     """
-    YOU LOVE ENTROPY?
-    YOU'LL LOVE HER...
+    YOU LOVE ENTROPY???
     """
     chars = list(" " + string.ascii_letters + string.digits + string.punctuation)
     if key is None:
@@ -64,7 +64,7 @@ def morse(text: str, encrypt: bool = True) -> str:
     IT'S JUST DOTS DASHES AND SLASHES
     
     BRAND DID YOU KNOW?
-    SHE ONCE WAS, morse.py!
+    IT ONCE WAS, morse.py!
     """
     MORSE = {
         'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',    'F': '..-.',
@@ -96,8 +96,8 @@ def main() -> None:
 - CAESAR CIPHER
 - ATBASH CIPHER
 - RANDOM SUBSTITUTION
-- MORSE CODE{RST}
-""")
+- MORSE CODE
+{RST}""")
             cipher = input(f"{BLACK}which cipher? {RST}").strip().upper()
             if cipher not in {"CAESAR", "CAESAR CIPHER", "ATBASH", "ATBASH CIPHER", "RAND", "RANDOM", "RANDOM SUBSTITUTION", "MORSE", "MORSE CODE"}:
                 print(f"{RED}E:{RST} CIPHER NOT KNOWN")
@@ -127,17 +127,13 @@ def main() -> None:
 
             print(f"{CYAN}> {output}{RST}\n")
 
-# yes... next push will have shell module integrated in it... more better-ly
-
 if __name__ == "__main__": 
     main()
 
 RAY = f"""
-{BOLD}{UNDER}MANY{RST} GIRLS GIVE MIXED SIGNALS.
-THIS IS JUST THEIR TOOL AND YOU CAN USE IT TOO.
-I AM NOT BEING SEXIST OR ANYTHING... IT'S JUST A FACT.
+THIS IS MY CRYPT... DON'T DISTURB ME... CUJO
 
-CARE FOR ANY FACT? I SWEAR IT'S A FUN FACT...
+CARE FOR A {UNDER}FUN FACT{RST}?
 
 YOU KNOW? __name__ IS A PRE DEFINED VARIABLE.
 IT'S SET "__main__" IF THE CODE IS RUN DIRECTLY

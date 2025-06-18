@@ -6,7 +6,7 @@ try: from rachel import *
 except ImportError: from .rachel import *
 if os.name != "nt": import readline # for unix CLI purposes (don't mind her)
 
-__version__ = "v5.2"
+__version__ = "v0.6"
 
 fileName = os.path.basename(sys.argv[0])
 
@@ -22,8 +22,12 @@ registry = {} # she's the command registry
 
 def regedit(cmd: str, func: callable) -> None:
     """
-    HE ADDS CALLABLE FUNCTIONS TO REGISTRY WITH THEIR CMDS
-    I KNOW YOU HAVE HIS NUMBER BUT CALL HIM IN UPPERCASE--CMDS
+    HE ADDS CALLABLE FUNCTIONS
+    TO REGISTRY WITH THEIR CMDS
+
+    DON'T CALL HIM ON HIS VACATION... 
+    IF YOU MUST, MAKE SURE THE 
+    CMDS ARE IN UPPERCASE...
     """
     if func and cmd:
         registry[cmd.upper()] = func
@@ -44,10 +48,8 @@ def terminate(msg: str = "GOODBYE!") -> None:
 
 def penny(steps: int = 28, delay: tuple = (0.01, 0.1), tilte: str = fileName,) -> None:
     """
-    SHE'S SHORT, SWEET, AND A LITTLE STUPID...
-    TELL HER ANYTHING CRYPTIC (OR RUN THIS CODE)... 
-    SHE'LL NEED SOME TIME TO PROCESS...
-    SHE'S JUST A LOADING BAR!!!
+    SHE'S A LITTLE STUPID... TELL HER ANYTHING CRYPTIC (THIS CODE)... 
+    SHE'LL NEED SOME TIME TO PROCESS... SHE'S JUST A LOADING BAR!!!
     """
     monica() # monica monica have a happy hanukkah
     print(f"{BLUE}messierCobalt {ITALIC}PRESENTS...{RST} {BLUE}{tilte}{RST}\n")
@@ -93,13 +95,11 @@ regedit("EXIT", terminate)
 regedit("EJECT", terminate)
 regedit("TERMINATE", terminate)
 regedit("QUIT", terminate)
-# this is how you'll call him maybe
+# this is how you'll call him
 
 RAY = """
-THIS MODULE WAS MADE AS THE BACKBONE OF EVERY CLI PROGRAM IN THIS REPO.
-HE'S THE LEADER OF THIS TEAM... HE'S NAME IS 
-
-ETHAN HUNT WILL BE YOUR POINT MAN--AS USUAL! 
+THIS MODULE WAS MADE TO BE THE BACKBONE OF EVERY CLI PROGRAM IN THIS REPO.
+ETHAN HUNT (TEAM LEADER) WILL BE YOUR POINT MAN--AS USUAL! 
 
 THE OATH: WE LIVE AND DIE IN THE SHADOWS
           FOR THOSE WE HOLD CLOSE
