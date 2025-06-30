@@ -12,8 +12,8 @@ Listen carefully, if you will. There's a __*vision*__ :
     - **hunt** — the leader of every IMF modules. Backbone of every CLI programs in this repo.
     - **rachel** — high on fashion, she styles text... 
 - **CASE** — he runs b/w character CASEs. he's 90% honest... i mean accurate... 
-- **CRYPTic** — he's just a simple (game) CLI based cipher... converter. #comingsoon
-- **RPSLS** — simple rock, paper, scissors, lizard, spock... game w/ it--THE ENTITY (CLI). #comingsoon
+- **Crypt** — he's just a simple (game) CLI based cipher... converter.
+- **RPSLS** — simple rock, paper, scissors, lizard, spock... game (CLI). 
 
 ---
 
